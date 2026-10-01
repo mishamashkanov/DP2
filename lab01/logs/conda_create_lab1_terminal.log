@@ -1,0 +1,278 @@
+3 channel Terms of Service accepted
+Retrieving notices: ...working... done
+Channels:
+ - defaults
+Platform: win-64
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... done
+
+
+==> WARNING: A newer version of conda exists. <==
+    current version: 26.7.2
+    latest version: 26.7.3
+
+Please update conda by running
+
+    $ conda self update
+
+
+
+## Package Plan ##
+
+  environment location: D:\PROGRAMM\anaconda3\envs\lab1_terminal
+
+  added / updated specs:
+    - ipykernel
+    - jupyter
+    - matplotlib
+    - notebook
+    - numpy
+    - pandas
+    - python=3.12
+    - scikit-learn
+    - seaborn
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    brotlicffi-1.2.0.1         |  py312hd7fb8db_0         350 KB
+    cloudpickle-3.1.2          |  py312haa95532_0          73 KB
+    expat-2.8.5                |       hd7fb8db_1          32 KB
+    ipython_genutils-0.2.0     |     pyhd3eb1b0_1          27 KB
+    joblib-1.6.0               |  py312haa95532_0         512 KB
+    jupyter-builder-1.2.0      |  py312haa95532_0         882 KB
+    jupyterlab-4.6.4           |  py312haa95532_0        12.8 MB
+    jupyterlab_server-2.28.1   |  py312haa95532_0         119 KB
+    libexpat-2.8.5             |       hd7fb8db_1         128 KB
+    mysql-common-9.7.2         |       h0b12ad4_1         652 KB
+    mysql-libs-9.7.2           |       h08a8c37_1         1.2 MB
+    nbconvert-7.17.1           |  py312haa95532_1           8 KB
+    nbconvert-core-7.17.1      |  py312haa95532_1         527 KB
+    nbconvert-pandoc-7.17.1    |  py312haa95532_1           8 KB
+    notebook-7.6.2             |  py312haa95532_0         4.3 MB
+    pygments-2.21.0            |  py312haa95532_0         4.8 MB
+    qtbase-6.11.0              |       h5156bcb_5        23.8 MB
+    urllib3-2.8.0              |  py312haa95532_1         361 KB
+    zeromq-4.3.5               |       h6a984cb_3         4.0 MB
+    ------------------------------------------------------------
+                                           Total:        54.5 MB
+
+The following NEW packages will be INSTALLED:
+
+  _openmp_mutex      pkgs/main/win-64::_openmp_mutex-2.0-52_msvc 
+  anyio              pkgs/main/win-64::anyio-4.15.1-py312haa95532_0 
+  aom                pkgs/main/win-64::aom-3.14.0-h1653897_0 
+  argon2-cffi        pkgs/main/win-64::argon2-cffi-25.1.0-py312haa95532_0 
+  argon2-cffi-bindi~ pkgs/main/win-64::argon2-cffi-bindings-25.1.0-py312h02ab6af_0 
+  asttokens          pkgs/main/win-64::asttokens-3.0.1-py312haa95532_0 
+  async-lru          pkgs/main/win-64::async-lru-2.3.0-py312haa95532_0 
+  attrs              pkgs/main/win-64::attrs-26.1.0-py312h35db113_0 
+  babel              pkgs/main/win-64::babel-2.18.0-py312haa95532_0 
+  beautifulsoup4     pkgs/main/win-64::beautifulsoup4-4.15.0-py312haa95532_0 
+  blas               pkgs/main/win-64::blas-1.0-mkl 
+  bleach             pkgs/main/win-64::bleach-6.4.0-py312haa95532_0 
+  brotlicffi         pkgs/main/win-64::brotlicffi-1.2.0.1-py312hd7fb8db_0 
+  bzip2              pkgs/main/win-64::bzip2-1.0.8-h2bbff1b_6 
+  ca-certificates    pkgs/main/win-64::ca-certificates-2026.8.13-haa95532_0 
+  cairo              pkgs/main/win-64::cairo-1.18.4-he9e932c_0 
+  certifi            pkgs/main/win-64::certifi-2026.7.22-py312haa95532_0 
+  cffi               pkgs/main/win-64::cffi-2.1.1-py312h1c6eee0_0 
+  charset-normalizer pkgs/main/win-64::charset-normalizer-3.4.7-py312haa95532_0 
+  cloudpickle        pkgs/main/win-64::cloudpickle-3.1.2-py312haa95532_0 
+  colorama           pkgs/main/win-64::colorama-0.4.6-py312haa95532_0 
+  comm               pkgs/main/win-64::comm-0.2.3-py312haa95532_0 
+  conpty             pkgs/main/win-64::conpty-1.23.20211.0-h169ad4e_2 
+  contourpy          pkgs/main/win-64::contourpy-1.4.0-py312h90c3233_0 
+  cycler             pkgs/main/win-64::cycler-0.12.1-py312haa95532_0 
+  dav1d              pkgs/main/win-64::dav1d-1.5.3-h4375697_1 
+  debugpy            pkgs/main/win-64::debugpy-1.8.21-py312hd7fb8db_0 
+  defusedxml         pkgs/main/noarch::defusedxml-0.7.1-pyhd3eb1b0_0 
+  executing          pkgs/main/win-64::executing-2.2.1-py312haa95532_1 
+  expat              pkgs/main/win-64::expat-2.8.5-hd7fb8db_1 
+  fontconfig         pkgs/main/win-64::fontconfig-2.15.0-hd211d86_0 
+  fonttools          pkgs/main/win-64::fonttools-4.63.0-py312h1c6eee0_0 
+  freeglut           pkgs/main/win-64::freeglut-3.8.0-hfcef157_0 
+  freetype           pkgs/main/win-64::freetype-2.14.1-hfbffc0b_0 
+  graphite2          pkgs/main/win-64::graphite2-1.3.15-h781baf4_0 
+  h11                pkgs/main/win-64::h11-0.16.0-py312haa95532_1 
+  harfbuzz           pkgs/main/win-64::harfbuzz-12.3.0-h807c389_2 
+  httpcore           pkgs/main/win-64::httpcore-1.0.9-py312haa95532_0 
+  httpx              pkgs/main/win-64::httpx-0.28.1-py312haa95532_1 
+  icu                pkgs/main/win-64::icu-78.3-ha03e165_1 
+  idna               pkgs/main/win-64::idna-3.18-py312haa95532_0 
+  intel-openmp       pkgs/main/win-64::intel-openmp-2025.0.0-haa95532_1165 
+  ipykernel          pkgs/main/win-64::ipykernel-7.3.0-py312h4442805_0 
+  ipython            pkgs/main/win-64::ipython-9.17.1-py312haa95532_0 
+  ipython_genutils   pkgs/main/noarch::ipython_genutils-0.2.0-pyhd3eb1b0_1 
+  ipython_pygments_~ pkgs/main/win-64::ipython_pygments_lexers-1.1.1-py312haa95532_0 
+  ipywidgets         pkgs/main/win-64::ipywidgets-8.1.9-py312haa95532_0 
+  jedi               pkgs/main/win-64::jedi-0.20.0-py312haa95532_0 
+  jinja2             pkgs/main/win-64::jinja2-3.1.6-py312haa95532_1 
+  joblib             pkgs/main/win-64::joblib-1.6.0-py312haa95532_0 
+  json5              pkgs/main/win-64::json5-0.15.0-py312haa95532_0 
+  jsonschema         pkgs/main/win-64::jsonschema-4.26.0-py312haa95532_0 
+  jsonschema-specif~ pkgs/main/win-64::jsonschema-specifications-2025.9.1-py312haa95532_0 
+  jupyter            pkgs/main/win-64::jupyter-1.1.1-py312haa95532_0 
+  jupyter-builder    pkgs/main/win-64::jupyter-builder-1.2.0-py312haa95532_0 
+  jupyter-lsp        pkgs/main/win-64::jupyter-lsp-2.3.1-py312haa95532_1 
+  jupyter_client     pkgs/main/win-64::jupyter_client-8.10.0-py312haa95532_0 
+  jupyter_console    pkgs/main/win-64::jupyter_console-6.6.3-py312haa95532_1 
+  jupyter_core       pkgs/main/win-64::jupyter_core-5.9.1-py312haa95532_0 
+  jupyter_events     pkgs/main/win-64::jupyter_events-0.12.1-py312haa95532_0 
+  jupyter_server     pkgs/main/win-64::jupyter_server-2.21.1-py312haa95532_0 
+  jupyter_server_te~ pkgs/main/win-64::jupyter_server_terminals-0.5.4-py312haa95532_0 
+  jupyterlab         pkgs/main/win-64::jupyterlab-4.6.4-py312haa95532_0 
+  jupyterlab_pygmen~ pkgs/main/win-64::jupyterlab_pygments-0.3.0-py312haa95532_0 
+  jupyterlab_server  pkgs/main/win-64::jupyterlab_server-2.28.1-py312haa95532_0 
+  jupyterlab_widgets pkgs/main/noarch::jupyterlab_widgets-3.0.17-pyhd3eb1b0_0 
+  kiwisolver         pkgs/main/win-64::kiwisolver-1.5.0-py312hd7fb8db_0 
+  lcms2              pkgs/main/win-64::lcms2-2.19.1-h5da84a9_1 
+  lerc               pkgs/main/win-64::lerc-4.1.0-hd7fb8db_2 
+  libavif            pkgs/main/win-64::libavif-1.4.2-h1a73fbf_0 
+  libdeflate         pkgs/main/win-64::libdeflate-1.22-h5bf469e_0 
+  libexpat           pkgs/main/win-64::libexpat-2.8.5-hd7fb8db_1 
+  libffi             pkgs/main/win-64::libffi-3.4.8-h42d73b9_3 
+  libglib            pkgs/main/win-64::libglib-2.88.3-h55e2dac_1 
+  libhwloc           pkgs/main/win-64::libhwloc-2.12.1-default_hfa10c62_1000 
+  libiconv           pkgs/main/win-64::libiconv-1.18-hc89ec93_0 
+  libjpeg-turbo      pkgs/main/win-64::libjpeg-turbo-3.1.3-h02ab6af_0 
+  libkrb5            pkgs/main/win-64::libkrb5-1.22.2-h3d06f0e_0 
+  libopenjpeg        pkgs/main/win-64::libopenjpeg-2.5.4-h1c6eee0_2 
+  libpng             pkgs/main/win-64::libpng-1.6.56-h2854ad3_0 
+  libpq              pkgs/main/win-64::libpq-18.4-h7c26194_1 
+  libsodium          pkgs/main/win-64::libsodium-1.0.21-h3c3880a_1 
+  libtiff            pkgs/main/win-64::libtiff-4.7.2-h37aaaa1_0 
+  libwebp-base       pkgs/main/win-64::libwebp-base-1.6.0-hbf3958f_0 
+  libxml2            pkgs/main/win-64::libxml2-2.13.9-h6201b9f_0 
+  libzlib            pkgs/main/win-64::libzlib-1.3.2-h1c6eee0_0 
+  lz4-c              pkgs/main/win-64::lz4-c-1.9.4-h1c6eee0_5 
+  markupsafe         pkgs/main/win-64::markupsafe-3.0.3-py312h1c6eee0_0 
+  matplotlib         pkgs/main/win-64::matplotlib-3.11.2-py312he3dc4dc_0 
+  matplotlib-base    pkgs/main/win-64::matplotlib-base-3.11.2-py312h330ff07_0 
+  matplotlib-inline  pkgs/main/win-64::matplotlib-inline-0.2.2-py312haa95532_0 
+  mistune            pkgs/main/win-64::mistune-3.3.3-py312haa95532_0 
+  mkl                pkgs/main/win-64::mkl-2025.0.0-h585ebfc_931 
+  mkl-service        pkgs/main/win-64::mkl-service-2.7.2-py312h1b35211_0 
+  mkl_fft            pkgs/main/win-64::mkl_fft-2.3.2-py312h65213df_0 
+  mkl_random         pkgs/main/win-64::mkl_random-1.4.1-py312hf6ff4c0_0 
+  mysql-common       pkgs/main/win-64::mysql-common-9.7.2-h0b12ad4_1 
+  mysql-libs         pkgs/main/win-64::mysql-libs-9.7.2-h08a8c37_1 
+  narwhals           pkgs/main/win-64::narwhals-2.23.0-py312haa95532_0 
+  nbclient           pkgs/main/win-64::nbclient-0.11.0-py312haa95532_0 
+  nbconvert          pkgs/main/win-64::nbconvert-7.17.1-py312haa95532_1 
+  nbconvert-core     pkgs/main/win-64::nbconvert-core-7.17.1-py312haa95532_1 
+  nbconvert-pandoc   pkgs/main/win-64::nbconvert-pandoc-7.17.1-py312haa95532_1 
+  nbformat           pkgs/main/win-64::nbformat-5.11.0-py312haa95532_0 
+  nest-asyncio2      pkgs/main/win-64::nest-asyncio2-1.7.2-py312haa95532_0 
+  notebook           pkgs/main/win-64::notebook-7.6.2-py312haa95532_0 
+  notebook-shim      pkgs/main/win-64::notebook-shim-0.2.4-py312haa95532_1 
+  numpy              pkgs/main/win-64::numpy-2.5.3-py312h9606935_0 
+  numpy-base         pkgs/main/win-64::numpy-base-2.5.3-py312h89dd80d_0 
+  openssl            pkgs/main/win-64::openssl-3.5.8-hbb43b14_0 
+  packaging          pkgs/main/win-64::packaging-26.3-py312haa95532_0 
+  pandas             pkgs/main/win-64::pandas-3.0.6-py312hf6ff4c0_0 
+  pandoc             pkgs/main/win-64::pandoc-3.8-haa95532_0 
+  pandocfilters      pkgs/main/win-64::pandocfilters-1.5.1-py312haa95532_0 
+  parso              pkgs/main/win-64::parso-0.8.7-py312haa95532_0 
+  pcre2              pkgs/main/win-64::pcre2-10.48-h2dd0c64_0 
+  pillow             pkgs/main/win-64::pillow-12.3.0-py312hbb6c998_0 
+  pip                pkgs/main/noarch::pip-26.2.1-pyhc872135_0 
+  pixman             pkgs/main/win-64::pixman-0.46.4-h0701eb8_1 
+  platformdirs       pkgs/main/win-64::platformdirs-4.11.0-py312haa95532_0 
+  prometheus_client  pkgs/main/win-64::prometheus_client-0.24.1-py312haa95532_0 
+  prompt-toolkit     pkgs/main/win-64::prompt-toolkit-3.0.53-py312haa95532_0 
+  prompt_toolkit     pkgs/main/noarch::prompt_toolkit-3.0.53-hd3eb1b0_0 
+  psutil             pkgs/main/win-64::psutil-7.2.2-py312h1c6eee0_0 
+  pure_eval          pkgs/main/win-64::pure_eval-0.2.3-py312haa95532_0 
+  pycparser          pkgs/main/win-64::pycparser-3.0-py312haa95532_0 
+  pygments           pkgs/main/win-64::pygments-2.21.0-py312haa95532_0 
+  pyparsing          pkgs/main/win-64::pyparsing-3.3.2-py312haa95532_0 
+  pyqt               pkgs/main/win-64::pyqt-6.11.0-py312hd742356_0 
+  pyqt6-sip          pkgs/main/win-64::pyqt6-sip-13.11.1-py312h630b2a1_0 
+  pysocks            pkgs/main/win-64::pysocks-1.7.1-py312haa95532_2 
+  python             pkgs/main/win-64::python-3.12.14-hd7b1df3_0 
+  python-dateutil    pkgs/main/win-64::python-dateutil-2.9.0post0-py312haa95532_2 
+  python-fastjsonsc~ pkgs/main/win-64::python-fastjsonschema-2.22.1-py312haa95532_0 
+  python-json-logger pkgs/main/win-64::python-json-logger-4.1.0-py312haa95532_0 
+  python-tzdata      pkgs/main/noarch::python-tzdata-2026.3-pyhd3eb1b0_0 
+  pywin32            pkgs/main/win-64::pywin32-312-py312hd7fb8db_0 
+  pywinpty           pkgs/main/win-64::pywinpty-3.0.5-py312ha41a56f_0 
+  pyyaml             pkgs/main/win-64::pyyaml-6.0.3-py312hb9a58be_0 
+  pyzmq              pkgs/main/win-64::pyzmq-27.2.0-py312h4c98cb4_0 
+  qtbase             pkgs/main/win-64::qtbase-6.11.0-h5156bcb_5 
+  qtconsole          pkgs/main/win-64::qtconsole-5.7.2-py312haa95532_0 
+  qtdeclarative      pkgs/main/win-64::qtdeclarative-6.11.0-hcb633d5_1 
+  qtpy               pkgs/main/win-64::qtpy-2.4.3-py312haa95532_0 
+  qtsvg              pkgs/main/win-64::qtsvg-6.11.0-hf3e933c_1 
+  qttools            pkgs/main/win-64::qttools-6.11.0-had87466_1 
+  qtwebchannel       pkgs/main/win-64::qtwebchannel-6.11.0-h5895b07_1 
+  qtwebsockets       pkgs/main/win-64::qtwebsockets-6.11.0-he7f7b8d_1 
+  referencing        pkgs/main/win-64::referencing-0.37.0-py312haa95532_0 
+  requests           pkgs/main/win-64::requests-2.34.2-py312haa95532_0 
+  rfc3339-validator  pkgs/main/win-64::rfc3339-validator-0.1.4-py312haa95532_0 
+  rfc3986-validator  pkgs/main/win-64::rfc3986-validator-0.1.1-py312haa95532_0 
+  rpds-py            pkgs/main/win-64::rpds-py-0.28.0-py312h114bc41_0 
+  scikit-learn       pkgs/main/win-64::scikit-learn-1.9.1-py312h6c0dd63_0 
+  scipy              pkgs/main/win-64::scipy-1.18.1-py312h97a0a95_0 
+  seaborn            pkgs/main/win-64::seaborn-0.13.2-py312haa95532_3 
+  send2trash         pkgs/main/win-64::send2trash-1.8.3-py312haa95532_0 
+  setuptools         pkgs/main/win-64::setuptools-83.0.0-py312haa95532_0 
+  sip                pkgs/main/win-64::sip-6.15.1-py312h9561cc3_0 
+  six                pkgs/main/win-64::six-1.17.0-py312haa95532_0 
+  soupsieve          pkgs/main/win-64::soupsieve-2.9.2-py312haa95532_0 
+  sqlite             pkgs/main/win-64::sqlite-3.53.4-hee5a0db_0 
+  stack_data         pkgs/main/win-64::stack_data-0.6.3-py312haa95532_0 
+  tbb                pkgs/main/win-64::tbb-2022.3.0-h90c84d6_0 
+  tbb-devel          pkgs/main/win-64::tbb-devel-2022.3.0-h90c84d6_0 
+  terminado          pkgs/main/win-64::terminado-0.18.1-py312haa95532_1 
+  threadpoolctl      pkgs/main/win-64::threadpoolctl-3.5.0-py312h4442805_1 
+  tinycss2           pkgs/main/win-64::tinycss2-1.5.1-py312haa95532_0 
+  tk                 pkgs/main/win-64::tk-8.6.15-hf199647_0 
+  tornado            pkgs/main/win-64::tornado-6.5.8-py312h1c6eee0_0 
+  traitlets          pkgs/main/win-64::traitlets-5.15.0-py312haa95532_0 
+  typing-extensions  pkgs/main/win-64::typing-extensions-4.16.0-py312haa95532_0 
+  typing_extensions  pkgs/main/win-64::typing_extensions-4.16.0-py312haa95532_0 
+  tzdata             pkgs/main/noarch::tzdata-2026c-he532380_0 
+  ucrt               pkgs/main/win-64::ucrt-10.0.22621.0-haa95532_0 
+  urllib3            pkgs/main/win-64::urllib3-2.8.0-py312haa95532_1 
+  vc                 pkgs/main/win-64::vc-14.42-haa95532_5 
+  vc14_runtime       pkgs/main/win-64::vc14_runtime-14.44.35208-h4927774_12 
+  vcomp14            pkgs/main/win-64::vcomp14-14.44.35208-h4927774_12 
+  vs2015_runtime     pkgs/main/win-64::vs2015_runtime-14.44.35208-ha6b5a95_12 
+  wcwidth            pkgs/main/win-64::wcwidth-0.8.2-py312haa95532_0 
+  webencodings       pkgs/main/win-64::webencodings-0.6.1-py312haa95532_0 
+  websocket-client   pkgs/main/win-64::websocket-client-1.8.0-py312haa95532_0 
+  wheel              pkgs/main/win-64::wheel-0.47.0-py312haa95532_0 
+  widgetsnbextension pkgs/main/win-64::widgetsnbextension-4.0.16-py312haa95532_0 
+  win_inet_pton      pkgs/main/win-64::win_inet_pton-1.1.0-py312haa95532_1 
+  winpty             pkgs/main/win-64::winpty-0.4.3-haa95532_5 
+  xz                 pkgs/main/win-64::xz-5.8.4-hb851c79_0 
+  yaml               pkgs/main/win-64::yaml-0.2.5-h6b1b717_1 
+  zeromq             pkgs/main/win-64::zeromq-4.3.5-h6a984cb_3 
+  zlib               pkgs/main/win-64::zlib-1.3.2-h1c6eee0_0 
+  zstd               pkgs/main/win-64::zstd-1.5.7-h56299aa_0 
+
+
+
+Downloading and Extracting Packages: ...working... done
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... done
+WARNING conda.conda_pypi.main:notify_externally_managed_future(156): 
+  Did you know? You can install many PyPI packages with conda
+  using the conda-pypi beta. Get started:
+    https://docs.conda.io/projects/conda/en/stable/new-features.html
+
+#
+# To activate this environment, use
+#
+#     $ conda activate lab1_terminal
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+
+[exited with code 0]

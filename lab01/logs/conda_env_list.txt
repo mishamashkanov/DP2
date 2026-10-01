@@ -1,0 +1,9 @@
+﻿
+# conda environments:
+#
+# * -> active
+# + -> frozen
+base                     D:\PROGRAMM\anaconda3
+lab1_terminal            D:\PROGRAMM\anaconda3\envs\lab1_terminal
+ml                       D:\PROGRAMM\anaconda3\envs\ml
+

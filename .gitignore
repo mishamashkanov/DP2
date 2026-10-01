@@ -1,0 +1,28 @@
+# Jupyter
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Окружения conda создаются командами из README, в репозиторий не попадают
+envs/
+
+# ОС
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Редакторы
+.vscode/
+.idea/
+
+# Выгрузки блокнотов и отчёты (генерируются из .ipynb, в репозиторий не нужны)
+*_report.html
+*.pdf
+Отчет_*.docx
+.report_tmp/
