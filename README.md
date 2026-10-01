@@ -10,7 +10,7 @@
 |---|---|
 | Дистрибутив | Anaconda Distribution (Anaconda3-2026.07-1, Windows x64) |
 | Python | 3.12 |
-| Основные библиотеки | `numpy`, `pandas`, `matplotlib`, `seaborn`, `scikit-learn` |
+| Основные библиотеки | `numpy`, `pandas`, `matplotlib`, `seaborn`, `scikit-learn`, `scipy`, `streamlit` |
 | Локальная среда | Anaconda Jupyter Notebook (изолированные окружения conda) |
 | Облачная среда | Google Colaboratory |
 
@@ -25,18 +25,28 @@
 ├── .gitignore                    — исключения для Git
 ├── start-jupyter.bat             — запуск Jupyter Notebook в окружении проекта
 │
-└── lab01/                        — ЛР №1. Настройка среды и виртуальные окружения
-    ├── lab01_anaconda.ipynb      — части 1 и 3: Anaconda, окружения, эксперимент на данных
-    ├── lab01_colab.ipynb         — часть 2: Google Colab, аппаратные ускорители (GPU/TPU)
-    ├── make_report.py            — сборка отчёта .docx из блокнотов
+├── lab01/                        — ЛР №1. Настройка среды и виртуальные окружения
+│   ├── lab01_anaconda.ipynb      — части 1 и 3: Anaconda, окружения, эксперимент на данных
+│   ├── lab01_colab.ipynb         — часть 2: Google Colab, аппаратные ускорители (GPU/TPU)
+│   ├── make_report.py            — сборка отчёта .docx из блокнотов
+│   ├── data/                     — наборы данных, использованные в работе
+│   │   ├── iris.csv              — Fisher's Iris, 150 объектов
+│   │   └── titanic.csv           — Titanic, 891 объект
+│   ├── images/                   — скриншоты графического интерфейса
+│   └── logs/                     — протоколы работы с conda в терминале
+│       ├── conda_create_lab1_terminal.log
+│       ├── conda_list_lab1_terminal.txt
+│       └── conda_env_list.txt
+│
+└── lab02/                        — ЛР №2. Разведочный анализ данных (EDA)
+    ├── lab02_eda.ipynb           — EDA двух наборов данных: аудит, очистка, распределения, выбросы, корреляции
+    ├── app_streamlit.py          — доп. задание: интерактивный дашборд Streamlit (набор Adult)
     ├── data/                     — наборы данных, использованные в работе
-    │   ├── iris.csv              — Fisher's Iris, 150 объектов
-    │   └── titanic.csv           — Titanic, 891 объект
-    ├── images/                   — скриншоты графического интерфейса
-    └── logs/                     — протоколы работы с conda в терминале
-        ├── conda_create_lab1_terminal.log
-        ├── conda_list_lab1_terminal.txt
-        └── conda_env_list.txt
+    │   ├── winequality-red.csv   — Wine Quality (red), 1599 объектов, UCI
+    │   └── adult.csv             — Adult (Census Income), 32561 объект, UCI
+    ├── images/                   — скриншоты дашборда Streamlit
+    └── logs/
+        └── conda_install_streamlit.log — протокол установки streamlit через терминал
 ```
 
 Единый принцип организации: **одна лабораторная работа — один каталог** `labNN/`,
@@ -67,6 +77,35 @@
 | `lab1_gui` | Anaconda Navigator (графический интерфейс) | демонстрация работы с окружениями через GUI |
 | `lab1_terminal` | Anaconda Prompt, `conda create` | окружение, в котором выполнен блокнот работы |
 
+### ЛР №2. Разведочный анализ данных
+
+**Цель:** изучение основных методов разведочного анализа данных, выявление скрытых
+закономерностей, поиск аномалий, визуализация распределений признаков и подготовка данных
+к последующему моделированию.
+
+**Среда:** Anaconda Jupyter Notebook, окружение `lab1_terminal`.
+
+| Часть | Содержание | Файл |
+|---|---|---|
+| 1 | Подбор двух новых наборов данных (UCI): числовой Wine Quality и смешанный Adult с категориальными признаками | [`lab02/lab02_eda.ipynb`](lab02/lab02_eda.ipynb) |
+| 2 | Для каждого набора: первичный аудит (`head`/`tail`, размерность, `.info()`, проверка типов); описательные статистики; обработка пропусков и дубликатов; гистограммы, KDE, violin, ECDF, boxplot; выбросы по правилу IQR; матрица корреляции и heatmap; scatterplot и pairplot; аналитические выводы | [`lab02/lab02_eda.ipynb`](lab02/lab02_eda.ipynb) |
+| 3 | Доп. задание: дашборд Streamlit для набора Adult — выбор способа очистки, фильтры, выбор признаков и типов графиков, динамические таблицы | [`lab02/app_streamlit.py`](lab02/app_streamlit.py) |
+
+**Использованные наборы данных:**
+
+| Набор | Объектов × признаков | Особенности | Результаты очистки |
+|---|---|---|---|
+| [Wine Quality (red)](https://archive.ics.uci.edu/dataset/186/wine+quality) | 1599 × 12 | все признаки числовые, целевой `quality` — порядковый (3…8) | пропусков нет; удалено 240 дубликатов |
+| [Adult (Census Income)](https://archive.ics.uci.edu/dataset/2/adult) | 32561 × 15 | 9 категориальных признаков, пропуски закодированы `?` | пропуски → категория `Unknown` / мода; удалено 24 дубликата |
+
+Запуск дашборда:
+
+```bat
+conda activate lab1_terminal
+cd lab02
+streamlit run app_streamlit.py
+```
+
 ## Воспроизведение окружения
 
 Создание окружения со всеми необходимыми пакетами:
@@ -75,6 +114,9 @@
 conda create -n lab1_terminal python=3.12 numpy pandas matplotlib seaborn scikit-learn jupyter notebook ipykernel -y
 conda activate lab1_terminal
 python -m ipykernel install --user --name lab1_terminal --display-name "Python (lab1_terminal)"
+
+:: для дополнительного задания ЛР №2 (дашборд)
+conda install streamlit -y
 ```
 
 Запуск Jupyter Notebook в каталоге репозитория — файл `start-jupyter.bat`
