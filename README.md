@@ -45,13 +45,21 @@
 │       ├── winequality-red.csv   — Wine Quality (red), 1599 объектов, UCI
 │       └── adult.csv             — Adult (Census Income), 32561 объект, UCI
 │
-└── lab03/                        — ЛР №3. Линейная регрессия
-    ├── lab03_linear_regression.ipynb — парная и множественная регрессия, эксперименты с признаками, метрики
-    ├── advertising_model.joblib  — обученная модель (Advertising, эксперимент В), создаётся блокнотом
-    ├── app_streamlit.py          — доп. задание: симулятор прогноза продаж на Streamlit
+├── lab03/                        — ЛР №3. Линейная регрессия
+│   ├── lab03_linear_regression.ipynb — парная и множественная регрессия, эксперименты с признаками, метрики
+│   ├── advertising_model.joblib  — обученная модель (Advertising, эксперимент В), создаётся блокнотом
+│   ├── app_streamlit.py          — доп. задание: симулятор прогноза продаж на Streamlit
+│   └── data/                     — наборы данных, использованные в работе
+│       ├── Salary_Data.csv       — Salary Data, 30 объектов (стаж → зарплата)
+│       └── Advertising.csv       — Advertising (ISLR), 200 объектов (реклама → продажи)
+│
+└── lab04/                        — ЛР №4. Сравнительный анализ алгоритмов классификации
+    ├── lab04_classification.ipynb — kNN, Decision Tree, SVM, MLP: GridSearchCV, метрики, сравнение
+    ├── models.joblib             — лучшие модели и выборки, создаётся блокнотом
+    ├── app_streamlit.py          — доп. задание: интерактивный выбор классификатора и гиперпараметров
     └── data/                     — наборы данных, использованные в работе
-        ├── Salary_Data.csv       — Salary Data, 30 объектов (стаж → зарплата)
-        └── Advertising.csv       — Advertising (ISLR), 200 объектов (реклама → продажи)
+        ├── breast_cancer.csv     — Breast Cancer Wisconsin (Diagnostic), 569 объектов
+        └── Telco-Customer-Churn.csv — Telco Customer Churn (IBM), 7043 объекта
 ```
 
 Единый принцип организации: **одна лабораторная работа — один каталог** `labNN/`,
@@ -142,6 +150,38 @@ cd lab03
 streamlit run app_streamlit.py
 ```
 
+### ЛР №4. Сравнительный анализ алгоритмов классификации
+
+**Цель:** практическое освоение методов машинного обучения для решения задач классификации,
+изучение метрик оценки качества классификаторов, исследование влияния гиперпараметров
+на точность моделей, применение интерактивной визуализации.
+
+**Среда:** Anaconda Jupyter Notebook, окружение `lab1_terminal`.
+
+| Часть | Содержание | Файл |
+|---|---|---|
+| 1 | Два новых набора данных: Breast Cancer Wisconsin и Telco Customer Churn; постановка бизнес- и математической задачи; предобработка (заполнение пропусков, `OneHotEncoder`, `StandardScaler` в `Pipeline`); стратифицированное разбиение 80/20 | [`lab04/lab04_classification.ipynb`](lab04/lab04_classification.ipynb) |
+| 2 | kNN, Decision Tree, SVM, MLP; подбор гиперпараметров `GridSearchCV` (5-fold stratified CV, F1-macro); лучшие комбинации параметров | [`lab04/lab04_classification.ipynb`](lab04/lab04_classification.ipynb) |
+| 3 | Матрицы неточностей, classification report, сводные таблицы метрик для каждого набора | [`lab04/lab04_classification.ipynb`](lab04/lab04_classification.ipynb) |
+| 4 | Доп. задание: Streamlit-приложение — выбор набора и классификатора, изменение гиперпараметров, обновляемые матрица неточностей и метрики | [`lab04/app_streamlit.py`](lab04/app_streamlit.py) |
+
+**Результаты на тестовой выборке (F1 — macro):**
+
+| Модель | Breast Cancer: Accuracy | Breast Cancer: F1 | Telco Churn: Accuracy | Telco Churn: F1 |
+|---|---|---|---|---|
+| kNN | 0.965 | 0.962 | 0.780 | 0.715 |
+| Decision Tree | 0.930 | 0.921 | 0.798 | 0.732 |
+| SVM | 0.974 | 0.971 | 0.788 | 0.715 |
+| MLP | 0.982 | 0.981 | 0.803 | 0.723 |
+
+Запуск приложения (после выполнения блокнота, который сохраняет модели):
+
+```bat
+conda activate lab1_terminal
+cd lab04
+streamlit run app_streamlit.py
+```
+
 ## Воспроизведение окружения
 
 Создание окружения со всеми необходимыми пакетами:
@@ -151,7 +191,7 @@ conda create -n lab1_terminal python=3.12 numpy pandas matplotlib seaborn scikit
 conda activate lab1_terminal
 python -m ipykernel install --user --name lab1_terminal --display-name "Python (lab1_terminal)"
 
-:: для дополнительных заданий ЛР №2 и №3 (Streamlit)
+:: для дополнительных заданий ЛР №2–4 (Streamlit)
 conda install streamlit -y
 ```
 
