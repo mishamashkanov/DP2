@@ -10,7 +10,7 @@
 |---|---|
 | Дистрибутив | Anaconda Distribution (Anaconda3-2026.07-1, Windows x64) |
 | Python | 3.12 |
-| Основные библиотеки | `numpy`, `pandas`, `matplotlib`, `seaborn`, `scikit-learn`, `scipy`, `streamlit` |
+| Основные библиотеки | `numpy`, `pandas`, `matplotlib`, `seaborn`, `scikit-learn`, `streamlit` |
 | Локальная среда | Anaconda Jupyter Notebook (изолированные окружения conda) |
 | Облачная среда | Google Colaboratory |
 
@@ -41,12 +41,9 @@
 └── lab02/                        — ЛР №2. Разведочный анализ данных (EDA)
     ├── lab02_eda.ipynb           — EDA двух наборов данных: аудит, очистка, распределения, выбросы, корреляции
     ├── app_streamlit.py          — доп. задание: интерактивный дашборд Streamlit (набор Adult)
-    ├── data/                     — наборы данных, использованные в работе
-    │   ├── winequality-red.csv   — Wine Quality (red), 1599 объектов, UCI
-    │   └── adult.csv             — Adult (Census Income), 32561 объект, UCI
-    ├── images/                   — скриншоты дашборда Streamlit
-    └── logs/
-        └── conda_install_streamlit.log — протокол установки streamlit через терминал
+    └── data/                     — наборы данных, использованные в работе
+        ├── winequality-red.csv   — Wine Quality (red), 1599 объектов, UCI
+        └── adult.csv             — Adult (Census Income), 32561 объект, UCI
 ```
 
 Единый принцип организации: **одна лабораторная работа — один каталог** `labNN/`,
@@ -88,15 +85,15 @@
 | Часть | Содержание | Файл |
 |---|---|---|
 | 1 | Подбор двух новых наборов данных (UCI): числовой Wine Quality и смешанный Adult с категориальными признаками | [`lab02/lab02_eda.ipynb`](lab02/lab02_eda.ipynb) |
-| 2 | Для каждого набора: первичный аудит (`head`/`tail`, размерность, `.info()`, проверка типов); описательные статистики; обработка пропусков и дубликатов; гистограммы, KDE, violin, ECDF, boxplot; выбросы по правилу IQR; матрица корреляции и heatmap; scatterplot и pairplot; аналитические выводы | [`lab02/lab02_eda.ipynb`](lab02/lab02_eda.ipynb) |
-| 3 | Доп. задание: дашборд Streamlit для набора Adult — выбор способа очистки, фильтры, выбор признаков и типов графиков, динамические таблицы | [`lab02/app_streamlit.py`](lab02/app_streamlit.py) |
+| 2 | Для каждого набора: первичный аудит (`head`/`tail`, размерность, `.info()`, проверка типов); описательные статистики; обработка пропусков и дубликатов; гистограммы, KDE, violinplot, boxplot; выбросы по правилу IQR; матрица корреляции и heatmap; scatterplot и pairplot; выводы | [`lab02/lab02_eda.ipynb`](lab02/lab02_eda.ipynb) |
+| 3 | Доп. задание: дашборд Streamlit для набора Adult — выбор способа очистки, фильтры, выбор признака и типа графика, динамические таблицы | [`lab02/app_streamlit.py`](lab02/app_streamlit.py) |
 
 **Использованные наборы данных:**
 
 | Набор | Объектов × признаков | Особенности | Результаты очистки |
 |---|---|---|---|
 | [Wine Quality (red)](https://archive.ics.uci.edu/dataset/186/wine+quality) | 1599 × 12 | все признаки числовые, целевой `quality` — порядковый (3…8) | пропусков нет; удалено 240 дубликатов |
-| [Adult (Census Income)](https://archive.ics.uci.edu/dataset/2/adult) | 32561 × 15 | 9 категориальных признаков, пропуски закодированы `?` | пропуски → категория `Unknown` / мода; удалено 24 дубликата |
+| [Adult (Census Income)](https://archive.ics.uci.edu/dataset/2/adult) | 32561 × 15 | 9 категориальных признаков, пропуски закодированы `?` | пропуски заполнены модой; удалено 24 дубликата |
 
 Запуск дашборда:
 
