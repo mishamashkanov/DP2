@@ -38,12 +38,20 @@
 │       ├── conda_list_lab1_terminal.txt
 │       └── conda_env_list.txt
 │
-└── lab02/                        — ЛР №2. Разведочный анализ данных (EDA)
-    ├── lab02_eda.ipynb           — EDA двух наборов данных: аудит, очистка, распределения, выбросы, корреляции
-    ├── app_streamlit.py          — доп. задание: интерактивный дашборд Streamlit (набор Adult)
+├── lab02/                        — ЛР №2. Разведочный анализ данных (EDA)
+│   ├── lab02_eda.ipynb           — EDA двух наборов данных: аудит, очистка, распределения, выбросы, корреляции
+│   ├── app_streamlit.py          — доп. задание: интерактивный дашборд Streamlit (набор Adult)
+│   └── data/                     — наборы данных, использованные в работе
+│       ├── winequality-red.csv   — Wine Quality (red), 1599 объектов, UCI
+│       └── adult.csv             — Adult (Census Income), 32561 объект, UCI
+│
+└── lab03/                        — ЛР №3. Линейная регрессия
+    ├── lab03_linear_regression.ipynb — парная и множественная регрессия, эксперименты с признаками, метрики
+    ├── advertising_model.joblib  — обученная модель (Advertising, эксперимент В), создаётся блокнотом
+    ├── app_streamlit.py          — доп. задание: симулятор прогноза продаж на Streamlit
     └── data/                     — наборы данных, использованные в работе
-        ├── winequality-red.csv   — Wine Quality (red), 1599 объектов, UCI
-        └── adult.csv             — Adult (Census Income), 32561 объект, UCI
+        ├── Salary_Data.csv       — Salary Data, 30 объектов (стаж → зарплата)
+        └── Advertising.csv       — Advertising (ISLR), 200 объектов (реклама → продажи)
 ```
 
 Единый принцип организации: **одна лабораторная работа — один каталог** `labNN/`,
@@ -103,6 +111,37 @@ cd lab02
 streamlit run app_streamlit.py
 ```
 
+### ЛР №3. Линейная регрессия
+
+**Цель:** изучение математических основ и практическое применение моделей парной и
+множественной линейной регрессии (`scikit-learn`), оценка качества моделей метриками
+эффективности, эксперименты с различными комбинациями признаков.
+
+**Среда:** Anaconda Jupyter Notebook, окружение `lab1_terminal`.
+
+| Часть | Содержание | Файл |
+|---|---|---|
+| 1 | Подбор двух новых наборов данных: Salary Data (парная регрессия) и Advertising (множественная) | [`lab03/lab03_linear_regression.ipynb`](lab03/lab03_linear_regression.ipynb) |
+| 2 | Аудит данных; `train_test_split` 80/20; `LinearRegression`: парная модель (slope, intercept, линия регрессии) и эксперименты А (`TV`), Б (`TV + radio`), В (`TV + radio + newspaper`); MAE, MSE, R² на тесте; сравнительная таблица | [`lab03/lab03_linear_regression.ipynb`](lab03/lab03_linear_regression.ipynb) |
+| 3 | Доп. задание: Streamlit-симулятор — ползунки бюджетов, модель из `joblib`, мгновенный прогноз продаж и обновляемый график | [`lab03/app_streamlit.py`](lab03/app_streamlit.py) |
+
+**Результаты на тестовой выборке:**
+
+| Модель | MAE | MSE | R² |
+|---|---|---|---|
+| Salary: `YearsExperience` | 6286.45 | 4.98·10⁷ | 0.902 |
+| Advertising А: `TV` | 2.444 | 10.205 | 0.677 |
+| Advertising Б: `TV + radio` | 1.444 | 3.138 | 0.901 |
+| Advertising В: `TV + radio + newspaper` | 1.461 | 3.174 | 0.899 |
+
+Запуск симулятора (после выполнения блокнота, который сохраняет модель):
+
+```bat
+conda activate lab1_terminal
+cd lab03
+streamlit run app_streamlit.py
+```
+
 ## Воспроизведение окружения
 
 Создание окружения со всеми необходимыми пакетами:
@@ -112,7 +151,7 @@ conda create -n lab1_terminal python=3.12 numpy pandas matplotlib seaborn scikit
 conda activate lab1_terminal
 python -m ipykernel install --user --name lab1_terminal --display-name "Python (lab1_terminal)"
 
-:: для дополнительного задания ЛР №2 (дашборд)
+:: для дополнительных заданий ЛР №2 и №3 (Streamlit)
 conda install streamlit -y
 ```
 
